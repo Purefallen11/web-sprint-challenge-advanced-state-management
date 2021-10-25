@@ -9,14 +9,14 @@ import { Provider } from "react-redux";
 
 const { worker } = require('./mocks/browser');
 worker.start();
-
-const rootElement = document.getElementById("root");
 const store = createStore(reducer, applyMiddleware(thunk))
+
+const rootElement = document.getElementById("root")
 ReactDOM.render(
     <Provider store={store}>
         <App /> 
+    </Provider>,
     rootElement
-    </Provider>
 );
 
 //Task List:
