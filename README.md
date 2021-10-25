@@ -21,7 +21,7 @@ In this challenge, you are to build a Smurfs village database utilizing Redux as
 
 ## Project Instructions
 
-In this project, you will build the reducer, actions and basic redux connects nessiary to display smurf data. You will be implementing both thunk and traditional redux actions.
+In this project, you will build the reducer, actions and basic redux connects necessary to display smurf data. You will be implementing both thunk and traditional redux actions.
 
  
 ## Project Requirements
