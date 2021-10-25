@@ -10,8 +10,9 @@ const SmurfList = (props) => {
     }, [])
 
     
-
-    return(<div className="listContainer">
+    return (<div className="listContainer">
+        {props.isLoading ? <p>Smurfs are loading...</p> : null}
+        {props.error ? <p style={{ color: 'red' }}>{props.error}</p> : null}
         {props.smurfs.map((smurf) =>
             (<Smurf smurf={smurf} key={smurf.id} />))}
     </div>);
