@@ -4,6 +4,8 @@ import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import "./index.css";
 import App from "./App";
+import reducer from './reducers/index'
+import { Provider } from "react-redux";
 
 const { worker } = require('./mocks/browser');
 worker.start();
@@ -11,8 +13,10 @@ worker.start();
 const rootElement = document.getElementById("root");
 const store = createStore(reducer, applyMiddleware(thunk))
 ReactDOM.render(
-    <App />, 
+    <Provider store={store}>
+        <App /> 
     rootElement
+    </Provider>
 );
 
 //Task List:
