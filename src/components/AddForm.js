@@ -29,6 +29,12 @@ const AddForm = (props) => {
             //add in error action
             props.setError('All fields are required')
         }
+        setState({
+            name:"",
+        position:"",
+        nickname:"",
+        description:""
+        })
     }
 
     return(<section>
